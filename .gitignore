@@ -1,0 +1,20 @@
+# OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Python temporary
+node_modules/
+__pycache__/
+*.pyc
+
+# Local logs
+*.log
