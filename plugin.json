@@ -1,0 +1,19 @@
+{
+  "name": "antigravity-skills",
+  "displayName": "Antigravity Essential Skills",
+  "version": "1.0.0",
+  "description": "Central unificada de 93 skills de elite: Design (taste, awesome-design-skills), Seguranca, /deploy na Vercel e Engenharia de Codigo.",
+  "author": {
+    "name": "rafaelmotocplus729-coder",
+    "url": "https://github.com/rafaelmotocplus729-coder"
+  },
+  "homepage": "https://github.com/rafaelmotocplus729-coder/antigravity-skills#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelmotocplus729-coder/antigravity-skills.git"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills"
+  ]
+}
