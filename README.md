@@ -1,29 +1,32 @@
-# 🧠 Central de Skills & Superpowers do Antigravity
+﻿# 🧠 Central de Skills Essenciais do Antigravity
 
-Repositório central unificado contendo todas as **243 skills** do ecossistema de projetos Antigravity.
+Repositório central otimizado contendo as **81 skills essenciais e de alto impacto** para projetos de desenvolvimento de software em geral no ecossistema Antigravity.
 
 ---
 
-## 🎯 Por que este repositório existe?
+## 🎯 Por que este repositório foi otimizado?
 
-Anteriormente, cada projeto continha uma cópia completa de dezenas de skills dentro de `.agent/skills` ou `.agents/skills`, resultando em:
-- **Duplicação massiva** (dezenas de pastas redundantes consumindo espaço e confundindo o ambiente).
-- **Inconsistência**: alterações feitas em uma skill em um projeto não refletiam nos outros.
-- **Dificuldade de sincronização**: projetos pesados para subir no Git ou nuvem.
+Anteriormente, o catálogo continha mais de 243 skills incluindo pipelines internos de nicho (Mantis, HyperFrames vídeo/áudio, desenvolvimento de games, duplicatas do Vercel e stubs de comando). Isso consumia **36.195 tokens (181% do limite de contexto do sistema)**, estourando o budget de sistema do Antigravity.
 
-### Como funciona a solução:
-1. **Ponto Único da Verdade (Single Source of Truth)**: Todas as skills ficam reunidas neste repositório único, totalmente deduplicadas.
-2. **Acesso Global sem Duplicação**: O Antigravity lê estas skills automaticamente em **qualquer projeto** que você abrir, através da configuração global (`~/.gemini/config/skills.json` ou `~/.agents/skills`).
-3. **Sincronização em Nuvem (GitHub)**: Ao colocar este repositório no GitHub, você pode cloná-lo em qualquer máquina (Windows, Mac ou Linux) e ter todas as suas skills instantaneamente ativas no Antigravity!
+### O que foi feito:
+1. **Remoção de Bloat e Ferramentas Hiperespecíficas**:
+   - ❌ Removidas 21 skills de vídeo/animação HyperFrames (`faceless-explainer`, `remotion-to-hyperframes`, `slideshow`, etc.).
+   - ❌ Removidas 9 skills de desenvolvimento de jogos (`2d-games`, `3d-games`, `multiplayer`, `vr-ar`, etc.).
+   - ❌ Removidas 21 skills internas do harness de segurança Mantis (`mantis-*`).
+   - ❌ Removidas 16 micro-etapas fragmentadas do Codex (`attack-path-analysis`, `assess-patch-risk`, etc.).
+   - ❌ Removidas 15 subferramentas ultraespecíficas da Cloudflare (`basin`, `k2`, `gateway-workers`, etc.).
+   - ❌ Removidas 38 duplicações do plugin Vercel e stubs triviais de 1 linha (`create`, `debug`, `plan`, `test`, etc.).
+2. **Curadoria de 81 Skills de Alto Impacto**:
+   - ✅ Mantidas as ferramentas fundamentais para **Full-Stack, Backend, Frontend, Cloud (Cloudflare/Supabase/Vercel), Testes, Segurança OWASP, Git, Arquitetura e IA**.
+3. **Economia Massiva de Tokens**:
+   - Redução de ~36.200 tokens para **~10.000 tokens** (ficando bem abaixo do limite de 20.000 tokens do Antigravity).
 
 ---
 
 ## 🚀 Como usar em qualquer projeto (Sem duplicar arquivos)
 
 ### Método 1: Disponibilidade Global Automática (Recomendado)
-Para que o Antigravity carregue todas essas skills em **todos** os seus projetos sem precisar configurar nada em cada pasta de projeto:
-
-No seu arquivo global `~/.gemini/config/skills.json` (localizado em `C:\Users\<seu-usuario>\.gemini\config\skills.json`), aponte para este diretório:
+No seu arquivo global `~/.gemini/config/skills.json` (`C:\Users\<seu-usuario>\.gemini\config\skills.json`), aponte diretamente para este repositório:
 
 ```json
 {
@@ -34,11 +37,9 @@ No seu arquivo global `~/.gemini/config/skills.json` (localizado em `C:\Users\<s
   ]
 }
 ```
-*Dica:* Todas as 243 skills também estão sincronizadas para a pasta global padrão `~/.agents/skills`.
 
 ### Método 2: Declarar no Projeto via `.agents/skills.json`
 Se você quiser que um projeto específico herde explicitamente deste repositório sem duplicar arquivos:
-Basta criar um arquivo leve `.agents/skills.json` na raiz do seu projeto com:
 ```json
 {
   "entries": [
@@ -56,306 +57,139 @@ Basta criar um arquivo leve `.agents/skills.json` na raiz do seu projeto com:
 ### No seu computador principal:
 ```bash
 git add .
-git commit -m "feat: centralizacao unificada de 243 skills antigravity"
-git push -u origin master
+git commit -m "refactor: otimizacao do catalogo para 81 skills essenciais"
+git push origin master
 ```
 
 ### Em qualquer nova máquina:
-Clone o repositório na pasta global de agentes:
 ```bash
-git clone https://github.com/<seu-usuario>/<seu-repo>.git ~/.agents/skills
+git clone https://github.com/rafaelmotocplus729-coder/antigravity-skills.git ~/.agents/skills
 ```
-*Pronto!* Todas as suas skills estarão imediatamente disponíveis no Antigravity daquela máquina sem precisar duplicar ou reconfigurar nada.
 
 ---
 
-## 📚 Catálogo Completo de Skills (243 Skills)
+## 📚 Catálogo das 81 Skills Curadas
 
-### 📂 Arquitetura, Engenharia & Qualidade de Código (36)
-
-| Skill | Descrição |
-| :--- | :--- |
-| [`architecture`](./skills/architecture/SKILL.md) | Architectural decision-making framework. Requirements analysis, trade-off evaluation, ADR documentation. Use when making architecture dec... |
-| [`clean-code`](./skills/clean-code/SKILL.md) | Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments |
-| [`code-review-and-quality`](./skills/code-review-and-quality/SKILL.md) | Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. U... |
-| [`code-review-checklist`](./skills/code-review-checklist/SKILL.md) | Code review guidelines covering code quality, security, and best practices. |
-| [`code-simplification`](./skills/code-simplification/SKILL.md) | Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, ... |
-| [`constraint-driven-development`](./skills/constraint-driven-development/SKILL.md) | Establishes a project's quality bar as a written contract and stops agents quietly lowering it. Interviews the user on which dimensions m... |
-| [`context-engineering`](./skills/context-engineering/SKILL.md) | Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when... |
-| [`debugging-and-error-recovery`](./skills/debugging-and-error-recovery/SKILL.md) | Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match ... |
-| [`deprecation-and-migration`](./skills/deprecation-and-migration/SKILL.md) | Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to ... |
-| [`documentation-and-adrs`](./skills/documentation-and-adrs/SKILL.md) | Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice... |
-| [`doubt-driven-development`](./skills/doubt-driven-development/SKILL.md) | Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every assumption cross-exam... |
-| [`idea-refine`](./skills/idea-refine/SKILL.md) | Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, ... |
-| [`improve-codebase-architecture`](./skills/improve-codebase-architecture/SKILL.md) | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick. |
-| [`incremental-implementation`](./skills/incremental-implementation/SKILL.md) | Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, o... |
-| [`interview-me`](./skills/interview-me/SKILL.md) | Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview... |
-| [`lint-and-validate`](./skills/lint-and-validate/SKILL.md) | Automatic quality control, linting, and static analysis procedures. Use after every code modification to ensure syntax correctness and pr... |
-| [`observability-and-instrumentation`](./skills/observability-and-instrumentation/SKILL.md) | Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when ship... |
-| [`performance-optimization`](./skills/performance-optimization/SKILL.md) | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you sus... |
-| [`performance-profiling`](./skills/performance-profiling/SKILL.md) | Performance profiling principles. Measurement, analysis, and optimization techniques. |
-| [`plan`](./skills/plan/SKILL.md) | Skill procedure and runbook. |
-| [`plan-writing`](./skills/plan-writing/SKILL.md) | Structured task planning with clear breakdowns, dependencies, and verification criteria. Use when implementing features, refactoring, or ... |
-| [`planning-and-task-breakdown`](./skills/planning-and-task-breakdown/SKILL.md) | Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when ... |
-| [`receiving-code-review`](./skills/receiving-code-review/SKILL.md) | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionabl... |
-| [`requesting-code-review`](./skills/requesting-code-review/SKILL.md) | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
-| [`source-driven-development`](./skills/source-driven-development/SKILL.md) | Grounds every implementation decision in official documentation. Use when you want to verify an approach against the official docs before... |
-| [`spec-driven-development`](./skills/spec-driven-development/SKILL.md) | Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when dr... |
-| [`systematic-debugging`](./skills/systematic-debugging/SKILL.md) | 4-phase systematic debugging methodology with root cause analysis and evidence-based verification. Use when debugging complex issues. |
-| [`tdd`](./skills/tdd/SKILL.md) | Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integr... |
-| [`tdd-workflow`](./skills/tdd-workflow/SKILL.md) | Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle. |
-| [`test`](./skills/test/SKILL.md) | Skill procedure and runbook. |
-| [`test-driven-development`](./skills/test-driven-development/SKILL.md) | Use when implementing any feature or bugfix, before writing implementation code |
-| [`testing-patterns`](./skills/testing-patterns/SKILL.md) | Testing patterns and principles. Unit, integration, mocking strategies. |
-| [`validation`](./skills/validation/SKILL.md) | Use when Codex is already in the validation phase of a security scan or the user explicitly asks to determine whether one or more candida... |
-| [`verification-before-completion`](./skills/verification-before-completion/SKILL.md) | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands a... |
-| [`writing-plans`](./skills/writing-plans/SKILL.md) | Use when you have a spec or requirements for a multi-step task, before touching code |
-| [`writing-skills`](./skills/writing-skills/SKILL.md) | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
-
-### 📂 Agentes, Superpowers & Automação (32)
+### 📂 Arquitetura, Engenharia & Qualidade de Código (10)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`agents-sdk`](./skills/agents-sdk/SKILL.md) | Build, debug, or review Cloudflare Agents SDK applications using the agents package. |
-| [`agy-customizations`](./skills/agy-customizations/SKILL.md) | Comprehensive guide and reference for the Antigravity Customization System. |
-| [`ai-gateway`](./skills/ai-gateway/SKILL.md) | Vercel AI Gateway guidance for setup, model discovery, authentication, routing, fallbacks, virtual models, evaluation models, BYOK, budge... |
-| [`ai-sdk`](./skills/ai-sdk/SKILL.md) | Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling,... |
-| [`antigravity_guide`](./skills/antigravity_guide/SKILL.md) | Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravity CLI (agy), Antigravi... |
-| [`automation`](./skills/automation/SKILL.md) | Interactive guide to design and create a scheduled background automation. Use this skill when the user wants to create an automated or re... |
-| [`behavioral-modes`](./skills/behavioral-modes/SKILL.md) | AI operational modes (brainstorm, implement, debug, review, teach, ship, orchestrate). Use to adapt behavior based on task type. |
-| [`brainstorm`](./skills/brainstorm/SKILL.md) | Skill procedure and runbook. |
-| [`brainstorming`](./skills/brainstorming/SKILL.md) | Socratic questioning protocol + user communication. MANDATORY for complex requests, new features, or unclear requirements. Includes progr... |
-| [`build-agents`](./skills/build-agents/SKILL.md) | "Default guidance for building AI agents. Use for generic requests to build, create, scaffold, design, architect, or implement an AI agen... |
-| [`chat-sdk`](./skills/chat-sdk/SKILL.md) | Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, Git... |
-| [`diagnosing-superpowers`](./skills/diagnosing-superpowers/SKILL.md) | Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results... |
-| [`dispatching-parallel-agents`](./skills/dispatching-parallel-agents/SKILL.md) | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
-| [`eve`](./skills/eve/SKILL.md) | "eve framework guidance for durable AI agents and agent-powered applications. Use when creating, editing, or debugging an eve project, wh... |
-| [`handoff`](./skills/handoff/SKILL.md) | Compact the current conversation into a handoff document for another agent to pick up. |
-| [`intelligent-routing`](./skills/intelligent-routing/SKILL.md) | Automatic agent selection and intelligent task routing. Analyzes user requests and automatically selects the best specialist agent(s) wit... |
-| [`is-agentic`](./skills/is-agentic/SKILL.md) | Score how ready a website, domain, or public MCP endpoint is for AI agents using Is Agentic, and read or act on the resulting report. Use... |
-| [`knowledge-update`](./skills/knowledge-update/SKILL.md) | Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start. |
-| [`marketplace`](./skills/marketplace/SKILL.md) | Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the `vercel integration` CLI. Use... |
-| [`mcp-builder`](./skills/mcp-builder/SKILL.md) | MCP (Model Context Protocol) server building principles. Tool design, resource patterns, best practices. |
-| [`migrate-workflows`](./skills/migrate-workflows/SKILL.md) | Automatically migrate legacy workflows to modern skills across global and workspace configurations. Scans for existing workflows, creates... |
-| [`orchestrate`](./skills/orchestrate/SKILL.md) | Skill procedure and runbook. |
-| [`parallel-agents`](./skills/parallel-agents/SKILL.md) | Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when comprehensive ana... |
-| [`permissioned-github`](./skills/permissioned-github/SKILL.md) | Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restrictions in the agent environm... |
-| [`plugin`](./skills/plugin/SKILL.md) | How to manage and create plugins — namespaced bundles of skills, agents, rules, MCP servers and hooks that install, enable and disable as... |
-| [`run-workflow`](./skills/run-workflow/SKILL.md) | How to write and run a dynamic workflow script with the `run_workflow` tool: |
-| [`subagent-driven-development`](./skills/subagent-driven-development/SKILL.md) | Use when executing implementation plans with independent tasks in the current session |
-| [`teach`](./skills/teach/SKILL.md) | Teach the user a new skill or concept, within this workspace. |
-| [`using-agent-skills`](./skills/using-agent-skills/SKILL.md) | Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece ... |
-| [`using-superpowers`](./skills/using-superpowers/SKILL.md) | Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including cla... |
-| [`vercel-agent`](./skills/vercel-agent/SKILL.md) | Vercel Agent guidance — dashboard and Slack chat, code review, production investigation, approved actions, and product installation. Use ... |
-| [`workflow`](./skills/workflow/SKILL.md) | Vercel Workflow SDK expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume... |
+| [$s](./skills/architecture/SKILL.md) | Architectural decision-making framework. Requirements analysis, trade-off evaluation, ADR documentation. Use when making archit... |
+| [$s](./skills/clean-code/SKILL.md) | Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments |
+| [$s](./skills/code-review-and-quality/SKILL.md) | Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or ... |
+| [$s](./skills/code-simplification/SKILL.md) | Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder... |
+| [$s](./skills/context-engineering/SKILL.md) | Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between task... |
+| [$s](./skills/debugging-and-error-recovery/SKILL.md) | Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior does... |
+| [$s](./skills/deprecation-and-migration/SKILL.md) | Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implemen... |
+| [$s](./skills/documentation-and-adrs/SKILL.md) | Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a des... |
+| [$s](./skills/documentation-templates/SKILL.md) | Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. |
+| [$s](./skills/lint-and-validate/SKILL.md) | Automatic quality control, linting, and static analysis procedures. Use after every code modification to ensure syntax correctn... |
 
-### 📂 Segurança & Auditoria (Codex & Mantis) (39)
+### 📂 APIs, Backend & Banco de Dados (10)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`assess-patch-risk`](./skills/assess-patch-risk/SKILL.md) | "Assess an immutable patch artifact's program impact, regression risk, and auto-merge eligibility. Use for generated patch files, provide... |
-| [`attack-path-analysis`](./skills/attack-path-analysis/SKILL.md) | Use when Codex is already in the attack-path-analysis phase of a security scan or the user explicitly asks to trace a security finding fr... |
-| [`deep-security-scan`](./skills/deep-security-scan/SKILL.md) | Use when the user asks for a deep, exhaustive, multi-pass, or variance-reducing repository-wide or scoped-path Codex Security scan. Run r... |
-| [`define-security-policy`](./skills/define-security-policy/SKILL.md) | Define, review, or update SECURITY.md guidance for a repository or component. Use when the user wants to clarify what Codex Security shou... |
-| [`finding-discovery`](./skills/finding-discovery/SKILL.md) | Use when Codex is already in the finding-discovery phase of a security scan or the user explicitly asks to discover candidate security fi... |
-| [`fix-finding`](./skills/fix-finding/SKILL.md) | Use only when the user explicitly asks to fix and verify a validated or plausible security vulnerability. Do not use for ordinary bug fix... |
-| [`mantis-advise`](./skills/mantis-advise/SKILL.md) | Proactive security advisor and architectural remediation assistant for secure code development. |
-| [`mantis-architecture`](./skills/mantis-architecture/SKILL.md) | Synthesizes raw learnings and codebase analysis into an interlinked Markdown Knowledge Base (KB). |
-| [`mantis-calibrate`](./skills/mantis-calibrate/SKILL.md) | Calculates the final risk score based on empirical evidence and architectural impact. |
-| [`mantis-chain`](./skills/mantis-chain/SKILL.md) | Analyzes individual security findings to identify and construct complex exploit chains. |
-| [`mantis-configure`](./skills/mantis-configure/SKILL.md) | Configures and validates Mantis pipeline environments, sandbox mechanisms, and AI models. |
-| [`mantis-critic`](./skills/mantis-critic/SKILL.md) | Assesses the production viability of findings, filtering out debug-only features and assertion traps. |
-| [`mantis-dedupe`](./skills/mantis-dedupe/SKILL.md) | Consolidates raw security findings to eliminate redundant reports. |
-| [`mantis-history`](./skills/mantis-history/SKILL.md) | Analyzes the repository's version control system (VCS) history to extract past vulnerabilities, security fixes, and vulnerability patterns. |
-| [`mantis-launch`](./skills/mantis-launch/SKILL.md) | Launches automated vulnerability review campaigns on target files or repositories. |
-| [`mantis-meta-agent`](./skills/mantis-meta-agent/SKILL.md) | Acts as the persistent supervisor, launching and monitoring the automated review campaign. |
-| [`mantis-patch`](./skills/mantis-patch/SKILL.md) | Generates minimal security fixes using transactional isolation (shadow directories or file backups), applies patches, and verifies them. |
-| [`mantis-pipeline-adapter`](./skills/mantis-pipeline-adapter/SKILL.md) | Interactively guides the design and implementation of custom deterministic orchestrator harnesses. |
-| [`mantis-plan`](./skills/mantis-plan/SKILL.md) | Formulates a targeted defensive security reviewing plan based on the active threat model and historical learnings. |
-| [`mantis-reflect`](./skills/mantis-reflect/SKILL.md) | Extracts learnings from execution trajectories at the end of a Mantis loop. |
-| [`mantis-report`](./skills/mantis-report/SKILL.md) | Generates a human-readable security review packet compiled from confirmed findings and exploit chains. |
-| [`mantis-reproduce`](./skills/mantis-reproduce/SKILL.md) | Generates and runs crash reproducers to verify security flaws. |
-| [`mantis-researcher`](./skills/mantis-researcher/SKILL.md) | Audits production source code files based on the strategy in workspace/plan.json. |
-| [`mantis-review`](./skills/mantis-review/SKILL.md) | Independently reviews findings and filters out false positives. |
-| [`mantis-structural-index`](./skills/mantis-structural-index/SKILL.md) | Builds a content-addressed semantic-unit index from source code for |
-| [`mantis-summarize`](./skills/mantis-summarize/SKILL.md) | Pre-processes the repository by generating security-focused summaries (mantis-summary.md) for each directory to make planning and researc... |
-| [`mantis-threat-model`](./skills/mantis-threat-model/SKILL.md) | Synthesizes trust boundaries, attack surfaces, and attacker profiles into a living threat model. |
-| [`propose-security-hardening`](./skills/propose-security-hardening/SKILL.md) | Develop evidence-backed structural and architectural security hardening proposals from vulnerability disclosures, supplied findings, inci... |
-| [`red-team-tactics`](./skills/red-team-tactics/SKILL.md) | Red team tactics principles based on MITRE ATT&CK. Attack phases, detection evasion, reporting. |
-| [`security-and-hardening`](./skills/security-and-hardening/SKILL.md) | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, d... |
-| [`security-audit`](./skills/security-audit/SKILL.md) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, ... |
-| [`security-diff-scan`](./skills/security-diff-scan/SKILL.md) | "Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities." |
-| [`security-scan`](./skills/security-scan/SKILL.md) | "Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to r... |
-| [`threat-model`](./skills/threat-model/SKILL.md) | Use when Codex is already in the threat-modeling phase of a security scan, the user explicitly invokes $threat-model, or the user explici... |
-| [`track-findings`](./skills/track-findings/SKILL.md) | Track validated Codex Security findings in Linear, Jira, GitHub issues, or draft GitHub security advisories. Use it for one finding or an... |
-| [`triage-finding`](./skills/triage-finding/SKILL.md) | "Use when the user supplies or imports existing security findings, vulnerability reports, or security/vulnerability Jira/Linear tickets f... |
-| [`verify-fix`](./skills/verify-fix/SKILL.md) | Use only when the user explicitly requests verification that a security fix remediates a reported vulnerability. Do not invoke automatica... |
-| [`vulnerability-scanner`](./skills/vulnerability-scanner/SKILL.md) | Advanced vulnerability analysis principles. OWASP 2025, Supply Chain Security, attack surface mapping, risk prioritization. |
-| [`vulnerability-writeup`](./skills/vulnerability-writeup/SKILL.md) | Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, n... |
+| [$s](./skills/api-and-interface-design/SKILL.md) | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating ... |
+| [$s](./skills/api-patterns/SKILL.md) | API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. |
+| [$s](./skills/auth/SKILL.md) | Authentication integration guidance â€” Clerk (native Vercel Marketplace), Better Auth, Descope, and Auth0 setup for Next.js ap... |
+| [$s](./skills/create-a-backend/SKILL.md) | Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions, Service... |
+| [$s](./skills/database-design/SKILL.md) | Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. |
+| [$s](./skills/nodejs-best-practices/SKILL.md) | Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches th... |
+| [$s](./skills/python-patterns/SKILL.md) | Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches ... |
+| [$s](./skills/rust-pro/SKILL.md) | Master Rust 1.75+ with modern async patterns, advanced type system |
+| [$s](./skills/supabase/SKILL.md) | Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vec... |
+| [$s](./skills/supabase-postgres-best-practices/SKILL.md) | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postg... |
 
-### 📂 Frontend, Design, DevTools & UI/UX (24)
+### 📂 Frontend, UI/UX & Design (9)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`a11y-debugging`](./skills/a11y-debugging/SKILL.md) | Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARI... |
-| [`app-builder`](./skills/app-builder/SKILL.md) | Main application building orchestrator. Creates full-stack applications from natural language requests. Determines project type, selects ... |
-| [`awesome-design-skills`](./skills/awesome-design-skills/SKILL.md) | Curated registry of 67+ design system skills from bergside/awesome-design-skills and TypeUI. Use when applying design themes (Bento, Brut... |
-| [`browser-testing-with-devtools`](./skills/browser-testing-with-devtools/SKILL.md) | Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to insp... |
-| [`chrome-devtools`](./skills/chrome-devtools/SKILL.md) | Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating br... |
-| [`cookie-debugging`](./skills/cookie-debugging/SKILL.md) | Uses Chrome DevTools MCP for inspecting, debugging, and testing cookies, session state, authentication issues, and cookie consent complia... |
-| [`debug-optimize-lcp`](./skills/debug-optimize-lcp/SKILL.md) | Guides debugging and optimizing Largest Contentful Paint (LCP) using Chrome DevTools MCP tools. Use this skill whenever the user asks abo... |
-| [`design-taste-frontend`](./skills/design-taste-frontend/SKILL.md) | tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of |
-| [`figma`](./skills/figma/SKILL.md) | Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed moti... |
-| [`frontend-design`](./skills/frontend-design/SKILL.md) | Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic ... |
-| [`frontend-ui-engineering`](./skills/frontend-ui-engineering/SKILL.md) | Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating componen... |
-| [`generative_ui`](./skills/generative_ui/SKILL.md) | How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you want to show the user ... |
-| [`memory-leak-debugging`](./skills/memory-leak-debugging/SKILL.md) | Diagnoses and resolves memory leaks in JavaScript/Node.js applications. Use when a user reports high memory usage, OOM errors, or wants t... |
-| [`microfrontends`](./skills/microfrontends/SKILL.md) | Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zone... |
-| [`mobile-design`](./skills/mobile-design/SKILL.md) | Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions.... |
-| [`nextjs-react-expert`](./skills/nextjs-react-expert/SKILL.md) | React and Next.js performance optimization from Vercel Engineering. Use when building React components, optimizing performance, eliminati... |
-| [`react-best-practices`](./skills/react-best-practices/SKILL.md) | Vercel's React and Next.js performance rules (70 rules in 8 categories ordered by impact - eliminating waterfalls, bundle size, server-si... |
-| [`tailwind-patterns`](./skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture. |
-| [`troubleshooting`](./skills/troubleshooting/SKILL.md) | Uses Chrome DevTools MCP and documentation to troubleshoot connection and target issues. Trigger this skill when list_pages, new_page, or... |
-| [`ui-plugin-navigation`](./skills/ui-plugin-navigation/SKILL.md) | Discover UI plugin panels relevant to the current task and surface a one-click pill in chat to open (toggle) them in the side pane. Use w... |
-| [`ui-ux-pro-max`](./skills/ui-ux-pro-max/SKILL.md) | Skill procedure and runbook. |
-| [`web-design-guidelines`](./skills/web-design-guidelines/SKILL.md) | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review ... |
-| [`web-perf`](./skills/web-perf/SKILL.md) | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores. |
-| [`webapp-testing`](./skills/webapp-testing/SKILL.md) | Web application testing principles. E2E, Playwright, deep audit strategies. |
+| [$s](./skills/frontend-design/SKILL.md) | Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating ... |
+| [$s](./skills/frontend-ui-engineering/SKILL.md) | Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creatin... |
+| [$s](./skills/generative_ui/SKILL.md) | How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you want to show... |
+| [$s](./skills/mobile-design/SKILL.md) | Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform co... |
+| [$s](./skills/react-best-practices/SKILL.md) | Vercel's React and Next.js performance rules (70 rules in 8 categories ordered by impact - eliminating waterfalls, bundle size,... |
+| [$s](./skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture. |
+| [$s](./skills/ui-ux-pro-max/SKILL.md) | AI-powered design intelligence with 50+ styles, 95+ color palettes, and automated design system generation |
+| [$s](./skills/web-design-guidelines/SKILL.md) | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design"... |
+| [$s](./skills/web-perf/SKILL.md) | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores. |
 
-### 📂 Vídeo & Animação (21)
+### 📂 Testes, Debugging & Performance (11)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`embedded-captions`](./skills/embedded-captions/SKILL.md) | Add captions or subtitles to an existing single-subject talking-head video without editing the |
-| [`faceless-explainer`](./skills/faceless-explainer/SKILL.md) | "Turn arbitrary text — an article, notes, a topic, a brief — into a faceless explainer video: there is no site or footage to capture, so ... |
-| [`general-video`](./skills/general-video/SKILL.md) | Author or edit a custom HyperFrames composition when no specialized workflow fits, or when |
-| [`hyperframes`](./skills/hyperframes/SKILL.md) | Mandatory entry point: read this first for any request to make, create, edit, animate, or render a |
-| [`hyperframes-animation`](./skills/hyperframes-animation/SKILL.md) | "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design te... |
-| [`hyperframes-audio`](./skills/hyperframes-audio/SKILL.md) | Use when audio already placed in a HyperFrames composition needs to be mixed: |
-| [`hyperframes-cli`](./skills/hyperframes-cli/SKILL.md) | Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, |
-| [`hyperframes-core`](./skills/hyperframes-core/SKILL.md) | The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `clas... |
-| [`hyperframes-creative`](./skills/hyperframes-creative/SKILL.md) | Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narra... |
-| [`hyperframes-keyframes`](./skills/hyperframes-keyframes/SKILL.md) | Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, |
-| [`hyperframes-registry`](./skills/hyperframes-registry/SKILL.md) | Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual — whene... |
-| [`hyperframes-studio`](./skills/hyperframes-studio/SKILL.md) | Use when working with a person on a HyperFrames project in Studio: first, |
-| [`media-use`](./skills/media-use/SKILL.md) | Agent Media OS for a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file ... |
-| [`motion-graphics`](./skills/motion-graphics/SKILL.md) | A short, design-led motion graphic where motion is the message — kinetic |
-| [`music-to-video`](./skills/music-to-video/SKILL.md) | "Turn a music track (an audio file, a video to pull audio from, or a track generated from a mood brief) into a beat-synced video — lyric ... |
-| [`pr-to-video`](./skills/pr-to-video/SKILL.md) | "Turn a GitHub pull request (a PR URL, owner/repo#N, or 'this PR' in a checked-out repo) into a code-change explainer video — changelog, ... |
-| [`preview`](./skills/preview/SKILL.md) | Skill procedure and runbook. |
-| [`product-launch-video`](./skills/product-launch-video/SKILL.md) | "Turn a product or marketing URL, pasted script, or brief into a product launch / promo video — SaaS promos, feature reveals, product dem... |
-| [`remotion-to-hyperframes`](./skills/remotion-to-hyperframes/SKILL.md) | 'Port an existing Remotion (React) composition''s source to HyperFrames HTML. Use ONLY on an explicit ask to port/convert/migrate/transla... |
-| [`slideshow`](./skills/slideshow/SKILL.md) | Author a HyperFrames slideshow — a presentation, pitch deck, or interactive |
-| [`talking-head-recut`](./skills/talking-head-recut/SKILL.md) | Package an existing talking-head / interview / podcast video with timed, designed GRAPHIC OVERLAY cards — kinetic titles, lower-thirds, d... |
+| [$s](./skills/a11y-debugging/SKILL.md) | Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic... |
+| [$s](./skills/browser-testing-with-devtools/SKILL.md) | Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you ne... |
+| [$s](./skills/chrome-devtools/SKILL.md) | Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, aut... |
+| [$s](./skills/memory-leak-debugging/SKILL.md) | Diagnoses and resolves memory leaks in JavaScript/Node.js applications. Use when a user reports high memory usage, OOM errors, ... |
+| [$s](./skills/observability-and-instrumentation/SKILL.md) | Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use... |
+| [$s](./skills/performance-optimization/SKILL.md) | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, wh... |
+| [$s](./skills/performance-profiling/SKILL.md) | Performance profiling principles. Measurement, analysis, and optimization techniques. |
+| [$s](./skills/systematic-debugging/SKILL.md) | 4-phase systematic debugging methodology with root cause analysis and evidence-based verification. Use when debugging complex i... |
+| [$s](./skills/test-driven-development/SKILL.md) | Use when implementing any feature or bugfix, before writing implementation code |
+| [$s](./skills/testing-patterns/SKILL.md) | Testing patterns and principles. Unit, integration, mocking strategies. |
+| [$s](./skills/webapp-testing/SKILL.md) | Web application testing principles. E2E, Playwright, deep audit strategies. |
 
-### 📂 Cloud, Deploy & Infraestrutura (Vercel, Cloudflare, Supabase) (56)
+### 📂 Git, Deploy & Infraestrutura (13)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`access-protected-vercel-deployment`](./skills/access-protected-vercel-deployment/SKILL.md) | Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playw... |
-| [`auth`](./skills/auth/SKILL.md) | Authentication integration guidance — Clerk (native Vercel Marketplace), Better Auth, Descope, and Auth0 setup for Next.js applications, ... |
-| [`basin`](./skills/basin/SKILL.md) | Build and troubleshoot Cloudflare Basin analytics workflows with Basin Pipelines, Basin Catalog, and Basin SQL. Use for streaming data in... |
-| [`bootstrap`](./skills/bootstrap/SKILL.md) | Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when... |
-| [`cdn-caching`](./skills/cdn-caching/SKILL.md) | Debug Vercel CDN caching — cache hit rate, stale content, revalidation behavior, ISR + PPR, per-request cache reasons (cacheReason) and P... |
-| [`cf-cli`](./skills/cf-cli/SKILL.md) | Cloudflare's official cf CLI (beta) for the public Cloudflare API and Workers projects. Use for finding and running Cloudflare commands f... |
-| [`ci-cd-and-automation`](./skills/ci-cd-and-automation/SKILL.md) | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality ga... |
-| [`cloudflare`](./skills/cloudflare/SKILL.md) | Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and product se... |
-| [`cloudflare-email-service`](./skills/cloudflare-email-service/SKILL.md) | Implement or troubleshoot Cloudflare Email Sending and Email Routing integrations and their delivery configuration. |
-| [`cloudflare-one`](./skills/cloudflare-one/SKILL.md) | Design, configure, troubleshoot, or review Cloudflare One Zero Trust and SASE deployments. Use cloudflare-one-migrations for migration pl... |
-| [`cloudflare-one-migrations`](./skills/cloudflare-one-migrations/SKILL.md) | Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout. |
-| [`create-a-backend`](./skills/create-a-backend/SKILL.md) | Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions, Services, contain... |
-| [`custom-metrics`](./skills/custom-metrics/SKILL.md) | Emit and query Vercel Custom Metrics. Use when instrumenting application or business measurements in Vercel Functions, using metric() fro... |
-| [`daemons`](./skills/daemons/SKILL.md) | Vercel Daemons guidance — long-running background workers built from a Dockerfile and declared under the `daemons` key in vercel.json. Us... |
-| [`deploy`](./skills/deploy/SKILL.md) | Skill procedure and runbook. |
-| [`deploy-to-vercel`](./skills/deploy-to-vercel/SKILL.md) | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the l... |
-| [`deployment-procedures`](./skills/deployment-procedures/SKILL.md) | Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking,... |
-| [`deployments-cicd`](./skills/deployments-cicd/SKILL.md) | Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuil... |
-| [`domains`](./skills/domains/SKILL.md) | Search, register, connect, transfer, and renew domain names on Vercel using the CLI or Domains Registrar API. Use for domain availability... |
-| [`durable-objects`](./skills/durable-objects/SKILL.md) | Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination. |
-| [`env-vars`](./skills/env-vars/SKILL.md) | Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, Secret or Config variable types, OIDC... |
-| [`flags-sdk`](./skills/flags-sdk/SKILL.md) | "Implement feature flags in Next.js or SvelteKit code with the Flags SDK (`flags` npm package). Use when installing or configuring the SD... |
-| [`gateway-workers`](./skills/gateway-workers/SKILL.md) | Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entryp... |
-| [`k2`](./skills/k2/SKILL.md) | Build and troubleshoot Cloudflare K2 or K2 Streams durable logs. Use for stream setup, producing from Workers or HTTP, configuring retent... |
-| [`nextjs-on-cloudflare`](./skills/nextjs-on-cloudflare/SKILL.md) | Build, migrate, and deploy Next.js apps on Cloudflare Workers with vinext. Use when starting a Next.js project on Cloudflare, moving an e... |
-| [`offload-to-sandbox`](./skills/offload-to-sandbox/SKILL.md) | Offload heavy builds, full test suites and parallel experiments from the local machine to Vercel Sandboxes with the `vercel sandbox` CLI.... |
-| [`queues`](./skills/queues/SKILL.md) | Vercel Queues guidance — durable topics with at-least-once delivery, independent consumer groups, retries, delays, and idempotency keys v... |
-| [`routing-middleware`](./skills/routing-middleware/SKILL.md) | Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. S... |
-| [`runtime-cache`](./skills/runtime-cache/SKILL.md) | Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Mi... |
-| [`sandbox-migrate-to-next`](./skills/sandbox-migrate-to-next/SKILL.md) | Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-next for apps ... |
-| [`sandbox-next`](./skills/sandbox-next/SKILL.md) | Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-migrate-to-next when porting a stabl... |
-| [`sandbox-stable`](./skills/sandbox-stable/SKILL.md) | Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. Use sandbox-next for preview apps and sandbox-migrat... |
-| [`server-management`](./skills/server-management/SKILL.md) | Server management principles and decision-making. Process management, monitoring strategy, and scaling decisions. Teaches thinking, not c... |
-| [`shipping-and-launch`](./skills/shipping-and-launch/SKILL.md) | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use w... |
-| [`supabase`](./skills/supabase/SKILL.md) | "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cro... |
-| [`supabase-postgres-best-practices`](./skills/supabase-postgres-best-practices/SKILL.md) | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres querie... |
-| [`turnstile-spin`](./skills/turnstile-spin/SKILL.md) | Set up, repair, or migrate to Cloudflare Turnstile bot verification in an existing frontend and backend, including server-side Siteverify. |
-| [`vercel-cli`](./skills/vercel-cli/SKILL.md) | Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, querying metrics, debuggi... |
-| [`vercel-cli-with-tokens`](./skills/vercel-cli-with-tokens/SKILL.md) | Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than i... |
-| [`vercel-composition-patterns`](./skills/vercel-composition-patterns/SKILL.md) | React composition patterns that scale. Use when refactoring components with |
-| [`vercel-connect`](./skills/vercel-connect/SKILL.md) | Vercel Connect expert guidance for securely obtaining scoped credentials for third-party services on behalf of apps or users. Use when wi... |
-| [`vercel-firewall`](./skills/vercel-firewall/SKILL.md) | Vercel Firewall expert guidance — automatic DDoS mitigation, the Vercel WAF (custom rules, IP blocking, managed rulesets, rate limiting),... |
-| [`vercel-flags`](./skills/vercel-flags/SKILL.md) | "Feature flags, A/B tests, and gradual rollouts with Vercel Flags, in any app or framework. Use whenever the user is planning, adding, or... |
-| [`vercel-functions`](./skills/vercel-functions/SKILL.md) | Vercel Functions expert guidance — Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functions (5 GB bu... |
-| [`vercel-optimize`](./skills/vercel-optimize/SKILL.md) | "Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Coll... |
-| [`vercel-react-best-practices`](./skills/vercel-react-best-practices/SKILL.md) | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refa... |
-| [`vercel-react-native-skills`](./skills/vercel-react-native-skills/SKILL.md) | React Native and Expo best practices for building performant mobile apps. Use |
-| [`vercel-react-view-transitions`](./skills/vercel-react-view-transitions/SKILL.md) | Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionT... |
-| [`vercel-sandbox`](./skills/vercel-sandbox/SKILL.md) | Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and expe... |
-| [`vercel-services`](./skills/vercel-services/SKILL.md) | Configure and troubleshoot Vercel Services for multiple frontends and backends in one project. Use when composing a polyglot or multi-ser... |
-| [`vercel-storage`](./skills/vercel-storage/SKILL.md) | Vercel storage expert guidance — Blob, Global Config (formerly Edge Config), and Marketplace storage (Neon Postgres, Upstash Redis). Use ... |
-| [`vercel-tracing`](./skills/vercel-tracing/SKILL.md) | Set up OpenTelemetry instrumentation for Vercel Tracing and query the resulting spans. Use when adding or fixing `@vercel/otel`, wiring a... |
-| [`verification`](./skills/verification/SKILL.md) | "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response.... |
-| [`workers-best-practices`](./skills/workers-best-practices/SKILL.md) | Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers. |
-| [`workers-profiling`](./skills/workers-profiling/SKILL.md) | Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. Then use this information to optimiz... |
-| [`wrangler`](./skills/wrangler/SKILL.md) | Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local d... |
+| [$s](./skills/bash-linux/SKILL.md) | Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems. |
+| [$s](./skills/ci-cd-and-automation/SKILL.md) | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate ... |
+| [$s](./skills/cloudflare/SKILL.md) | Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and ... |
+| [$s](./skills/deploy-to-vercel/SKILL.md) | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and giv... |
+| [$s](./skills/deployment-procedures/SKILL.md) | Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches... |
+| [$s](./skills/env-vars/SKILL.md) | Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, Secret or Config variable t... |
+| [$s](./skills/finishing-a-development-branch/SKILL.md) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
+| [$s](./skills/git-workflow-and-versioning/SKILL.md) | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitt... |
+| [$s](./skills/powershell-windows/SKILL.md) | PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling. |
+| [$s](./skills/server-management/SKILL.md) | Server management principles and decision-making. Process management, monitoring strategy, and scaling decisions. Teaches think... |
+| [$s](./skills/shipping-and-launch/SKILL.md) | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipp... |
+| [$s](./skills/workers-best-practices/SKILL.md) | Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers. |
+| [$s](./skills/wrangler/SKILL.md) | Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, includi... |
 
-### 📂 Desenvolvimento de Games (11)
+### 📂 Segurança & Hardening (2)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`2d-games`](./skills/2d-games/SKILL.md) | 2D game development principles. Sprites, tilemaps, physics, camera. |
-| [`3d-games`](./skills/3d-games/SKILL.md) | 3D game development principles. Rendering, shaders, physics, cameras. |
-| [`game-art`](./skills/game-art/SKILL.md) | Game art principles. Visual style selection, asset pipeline, animation workflow. |
-| [`game-audio`](./skills/game-audio/SKILL.md) | Game audio principles. Sound design, music integration, adaptive audio systems. |
-| [`game-design`](./skills/game-design/SKILL.md) | Game design principles. GDD structure, balancing, player psychology, progression. |
-| [`game-development`](./skills/game-development/SKILL.md) | Game development orchestrator. Routes to platform-specific skills based on project needs. |
-| [`mobile-games`](./skills/mobile-games/SKILL.md) | Mobile game development principles. Touch input, battery, performance, app stores. |
-| [`multiplayer`](./skills/multiplayer/SKILL.md) | Multiplayer game development principles. Architecture, networking, synchronization. |
-| [`pc-games`](./skills/pc-games/SKILL.md) | PC and console game development principles. Engine selection, platform features, optimization strategies. |
-| [`vr-ar`](./skills/vr-ar/SKILL.md) | VR/AR development principles. Comfort, interaction, performance requirements. |
-| [`web-games`](./skills/web-games/SKILL.md) | Web browser game development principles. Framework selection, WebGPU, optimization, PWA. |
+| [$s](./skills/security-and-hardening/SKILL.md) | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authent... |
+| [$s](./skills/security-audit/SKILL.md) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security q... |
 
-### 📂 Linguagens, Documentação & Utilitários (14)
+### 📂 Agentes, Planejamento & Automação (19)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`bash-linux`](./skills/bash-linux/SKILL.md) | Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems. |
-| [`database-design`](./skills/database-design/SKILL.md) | Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. |
-| [`documentation-templates`](./skills/documentation-templates/SKILL.md) | Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. |
-| [`gdocs`](./skills/gdocs/SKILL.md) | Read, create, edit, and manage Google Docs. Use when the user shares a docs.google.com URL, asks to summarize or extract content from a d... |
-| [`geo-fundamentals`](./skills/geo-fundamentals/SKILL.md) | Generative Engine Optimization for AI search engines (ChatGPT, Claude, Perplexity). |
-| [`git-workflow-and-versioning`](./skills/git-workflow-and-versioning/SKILL.md) | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncomm... |
-| [`i18n-localization`](./skills/i18n-localization/SKILL.md) | Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. |
-| [`nodejs-best-practices`](./skills/nodejs-best-practices/SKILL.md) | Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, no... |
-| [`powershell-windows`](./skills/powershell-windows/SKILL.md) | PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling. |
-| [`python-patterns`](./skills/python-patterns/SKILL.md) | Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, ... |
-| [`rust-pro`](./skills/rust-pro/SKILL.md) | Master Rust 1.75+ with modern async patterns, advanced type system |
-| [`seo-fundamentals`](./skills/seo-fundamentals/SKILL.md) | SEO fundamentals, E-E-A-T, Core Web Vitals, and Google algorithm principles. |
-| [`using-git-worktrees`](./skills/using-git-worktrees/SKILL.md) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated... |
-| [`writing-guidelines`](./skills/writing-guidelines/SKILL.md) | Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review do... |
+| [$s](./skills/agy-customizations/SKILL.md) | Comprehensive guide and reference for the Antigravity Customization System. Use to explain how customizations work, their loadi... |
+| [$s](./skills/ai-sdk/SKILL.md) | Vercel AI SDK expert guidance. Use when building AI-powered features â€” chat interfaces, text generation, structured output, t... |
+| [$s](./skills/antigravity_guide/SKILL.md) | Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravity CLI (agy),... |
+| [$s](./skills/app-builder/SKILL.md) | Main application building orchestrator. Creates full-stack applications from natural language requests. Determines project type... |
+| [$s](./skills/automation/SKILL.md) | Interactive guide to design and create a scheduled background automation. Use this skill when the user wants to create an autom... |
+| [$s](./skills/behavioral-modes/SKILL.md) | AI operational modes (brainstorm, implement, debug, review, teach, ship, orchestrate). Use to adapt behavior based on task type. |
+| [$s](./skills/brainstorming/SKILL.md) | Socratic questioning protocol + user communication. MANDATORY for complex requests, new features, or unclear requirements. Incl... |
+| [$s](./skills/build-agents/SKILL.md) | Default guidance for building AI agents. Use for generic requests to build, create, scaffold, design, architect, or implement a... |
+| [$s](./skills/executing-plans/SKILL.md) | Use when executing an implementation plan in the current session as the implementer yourself â€” your human partner chose inlin... |
+| [$s](./skills/incremental-implementation/SKILL.md) | Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than o... |
+| [$s](./skills/intelligent-routing/SKILL.md) | Automatic agent selection and intelligent task routing. Analyzes user requests and automatically selects the best specialist ag... |
+| [$s](./skills/interview-me/SKILL.md) | Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time... |
+| [$s](./skills/mcp-builder/SKILL.md) | MCP (Model Context Protocol) server building principles. Tool design, resource patterns, best practices. |
+| [$s](./skills/orchestrate/SKILL.md) | Coordinate multiple agents for complex tasks. Use for multi-perspective analysis, comprehensive reviews, or tasks requiring dif... |
+| [$s](./skills/parallel-agents/SKILL.md) | Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when compreh... |
+| [$s](./skills/planning-and-task-breakdown/SKILL.md) | Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks.... |
+| [$s](./skills/templates/SKILL.md) | Project scaffolding templates for new applications. Use when creating new projects from scratch. Contains 12 templates for vari... |
+| [$s](./skills/verification/SKILL.md) | Full-story verification â€” infers what the user is building, then verifies the complete flow end-to-end: browser â†’ API â†’ d... |
+| [$s](./skills/verification-before-completion/SKILL.md) | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification ... |
 
-### 📂 Outras Skills & Ferramentas (10)
+### 📂 Internacionalização, Utilitários & Extensibilidade (7)
 
 | Skill | Descrição |
 | :--- | :--- |
-| [`api-and-interface-design`](./skills/api-and-interface-design/SKILL.md) | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or Gr... |
-| [`api-patterns`](./skills/api-patterns/SKILL.md) | API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. |
-| [`create`](./skills/create/SKILL.md) | Skill procedure and runbook. |
-| [`debug`](./skills/debug/SKILL.md) | Skill procedure and runbook. |
-| [`enhance`](./skills/enhance/SKILL.md) | Skill procedure and runbook. |
-| [`executing-plans`](./skills/executing-plans/SKILL.md) | Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution,... |
-| [`finishing-a-development-branch`](./skills/finishing-a-development-branch/SKILL.md) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
-| [`incur`](./skills/incur/SKILL.md) | incur is a TypeScript framework for building CLIs that work for both AI agents and humans. Use when creating new CLIs. |
-| [`status`](./skills/status/SKILL.md) | Skill procedure and runbook. |
-| [`templates`](./skills/templates/SKILL.md) | Project scaffolding templates for new applications. Use when creating new projects from scratch. Contains 12 templates for various tech s... |
+| [$s](./skills/i18n-localization/SKILL.md) | Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. |
+| [$s](./skills/plugin/SKILL.md) | How to manage and create plugins â€” namespaced bundles of skills, agents, rules, MCP servers and hooks that install, enable an... |
+| [$s](./skills/seo-fundamentals/SKILL.md) | SEO fundamentals, E-E-A-T, Core Web Vitals, and Google algorithm principles. |
+| [$s](./skills/using-agent-skills/SKILL.md) | Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to ... |
+| [$s](./skills/using-git-worktrees/SKILL.md) | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures a... |
+| [$s](./skills/vercel-functions/SKILL.md) | Vercel Functions expert guidance â€” Node.js/Bun/Python runtimes, Fluid Compute, long-duration (30 min) functions, large functi... |
+| [$s](./skills/writing-skills/SKILL.md) | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+
+
 
